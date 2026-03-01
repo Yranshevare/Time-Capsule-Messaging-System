@@ -1,3 +1,5 @@
+import { server } from "../constant.js";
+
 const form = document.getElementById("sendMessageForm");
 
 form.addEventListener("submit", async (e) => {
@@ -10,7 +12,7 @@ form.addEventListener("submit", async (e) => {
     console.log(new Date(time).getTime())
 
     try {
-        const res = await fetch("http://localhost:3000/message", {
+        const res = await fetch(`${server}/message`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -77,7 +79,7 @@ ${name.slice(0, 2).toUpperCase()}</div>
 }
 
 (async function () {
-    const res = await fetch("http://localhost:3000/message", {
+    const res = await fetch(`${server}/message`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"

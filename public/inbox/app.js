@@ -1,4 +1,6 @@
-const eventSource = new EventSource(`http://localhost:3000/stream`);
+import { server } from "../constant.js";
+
+const eventSource = new EventSource(`${server}/stream`);
 // console.log("kk")
 
 eventSource.onmessage = (event) => {

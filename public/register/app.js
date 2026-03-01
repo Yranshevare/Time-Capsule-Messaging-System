@@ -1,3 +1,5 @@
+import { server } from "../constant.js";
+
 const form = document.getElementById("loginForm");
 
 form.addEventListener("submit", async (e) => {
@@ -7,7 +9,7 @@ form.addEventListener("submit", async (e) => {
     const password = document.getElementById("password").value;
 
     try {
-        const res = await fetch("http://localhost:3000/register", {
+        const res = await fetch(`${server}/register`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
