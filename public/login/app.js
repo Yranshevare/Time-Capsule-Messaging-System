@@ -1,4 +1,4 @@
-import { server } from "../constant.js";
+const server = "https://time-capsule-messaging-system.onrender.com";
 
 const form = document.getElementById("loginForm");
 
