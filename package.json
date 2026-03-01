@@ -6,7 +6,8 @@
   "scripts": {
     "watch": "tsc --watch",
     "dev": "nodemon dist/index.js",
-    "start":"tsc && node dist/index.js"
+    "start":"tsc && node dist/index.js",
+    "postinstall": "npx prisma generate && npx prisma db push"
   },
   "author": "yadnesh ranshevare",
   "license": "ISC",
