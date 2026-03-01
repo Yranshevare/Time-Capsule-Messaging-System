@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Finnger - Simplified Login</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#524af2",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .vault-depth {
+            box-shadow: 
+                0 20px 50px rgba(82, 74, 242, 0.1),
+                inset 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+
+<body
+    class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-hidden">
+    <div class="flex min-h-screen">
+        <div
+            class="w-full lg:w-[450px] xl:w-[500px] flex flex-col justify-between p-8 xl:p-12 bg-white dark:bg-background-dark z-20 shadow-2xl">
+            <div class="flex items-center gap-2">
+                <div
+                    class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
+                    <span class="material-symbols-outlined text-white">fingerprint</span>
+                </div>
+                <span class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">FintechFlow</span>
+            </div>
+            <div class="max-w-sm w-full mx-auto">
+                <div class="mb-10 text-left">
+                    <h1 class="text-3xl font-black mb-3 text-slate-900 dark:text-white tracking-tight">Welcome back</h1>
+                    <p class="text-slate-500 dark:text-slate-400">Please enter your details to access your secure
+                        financial dashboard.</p>
+                </div>
+                <form id="loginForm" class="space-y-6">
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">
+                            Username
+                        </label>
+                        <div class="relative">
+                            <input id="email"
+                                class="w-full h-14 px-4 rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 outline-none"
+                                placeholder="name@company.com" type="text" />
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center px-1">
+                            <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Password</label>
+                            <a class="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                                href="#">Forgot Password?</a>
+                        </div>
+                        <div class="relative flex items-center">
+                            <input id="password"
+                                class="w-full h-14 px-4 pr-12 rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 outline-none"
+                                placeholder="••••••••" type="password" />
+                            <button
+                                class="absolute right-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+                                type="button">
+                                <span class="material-symbols-outlined">visibility</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 py-1">
+                        <input class="w-4 h-4 rounded text-primary focus:ring-primary border-slate-300 cursor-pointer"
+                            id="remember" type="checkbox" />
+                        <label class="text-sm text-slate-600 dark:text-slate-400 cursor-pointer select-none"
+                            for="remember">Keep me logged in</label>
+                    </div>
+                    <button
+                        class="w-full h-14 bg-primary hover:bg-primary/90 text-white font-bold rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] mt-2">
+                        Log In
+                    </button>
+                </form>
+            </div>
+            <div class="text-center">
+                <p class="text-sm text-slate-500">Have an account? <a class="text-primary font-bold hover:underline"
+                        href="../login/index.html">Log in</a></p>
+            </div>
+        </div>
+        <div
+            class="hidden lg:flex flex-1 relative bg-gradient-to-br from-[#e0e7ff] via-[#f0f2ff] to-[#eef2ff] items-center justify-center overflow-hidden">
+            <div class="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-primary/10 blur-[100px]">
+            </div>
+            <div
+                class="absolute bottom-[-10%] left-[-10%] w-[700px] h-[700px] rounded-full bg-[#8b5cf6]/15 blur-[120px]">
+            </div>
+            <div class="absolute inset-0 opacity-[0.03]"
+                style="background-image: radial-gradient(#524af2 1px, transparent 1px); background-size: 40px 40px;">
+            </div>
+            <div class="relative z-10 flex flex-col items-center">
+                <div class="relative w-[450px] h-[450px] flex items-center justify-center">
+                    <div
+                        class="absolute inset-0 rounded-full border-[1px] border-primary/20 animate-[spin_20s_linear_infinite]">
+                    </div>
+                    <div
+                        class="absolute inset-8 rounded-full border-[1px] border-primary/10 animate-[spin_15s_linear_infinite_reverse]">
+                    </div>
+                    <div
+                        class="relative w-72 h-72 rounded-[4rem] glass-effect vault-depth flex items-center justify-center group">
+                        <div
+                            class="absolute inset-4 rounded-[3rem] bg-gradient-to-br from-white/40 to-white/10 flex items-center justify-center shadow-inner">
+                            <div
+                                class="w-48 h-48 rounded-full border-8 border-slate-100/50 flex items-center justify-center">
+                                <div
+                                    class="w-36 h-36 rounded-full bg-white flex items-center justify-center shadow-2xl">
+                                    <span class="material-symbols-outlined text-primary text-7xl font-light">lock</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute -top-12 -right-8 glass-effect p-4 rounded-2xl shadow-xl flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-green-600 text-xl">shield</span>
+                            </div>
+                            <div>
+                                <div class="h-2 w-16 bg-slate-400/20 rounded-full mb-1"></div>
+                                <div class="h-2 w-10 bg-slate-300/20 rounded-full"></div>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute bottom-4 -left-16 glass-effect p-4 rounded-2xl shadow-xl flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary text-xl">account_balance</span>
+                            </div>
+                            <div>
+                                <div class="h-2 w-20 bg-slate-400/20 rounded-full mb-1"></div>
+                                <div class="h-2 w-12 bg-slate-300/20 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute top-10 left-10 w-16 h-16 rounded-full bg-gradient-to-br from-white/80 to-slate-200/50 backdrop-blur shadow-lg flex items-center justify-center rotate-12">
+                        <span class="material-symbols-outlined text-primary/40 text-2xl">currency_bitcoin</span>
+                    </div>
+                    <div
+                        class="absolute bottom-20 right-0 w-20 h-20 rounded-full bg-gradient-to-br from-white/80 to-slate-200/50 backdrop-blur shadow-xl flex items-center justify-center -rotate-12 border border-white/40">
+                        <span class="material-symbols-outlined text-primary/40 text-3xl">token</span>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute top-20 left-20 opacity-20 transform -rotate-12">
+                <span class="material-symbols-outlined text-6xl text-primary">verified_user</span>
+            </div>
+            <div class="absolute bottom-20 right-20 opacity-20 transform rotate-12">
+                <span class="material-symbols-outlined text-6xl text-primary">security</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
