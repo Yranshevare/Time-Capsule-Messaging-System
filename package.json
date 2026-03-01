@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "watch": "tsc --watch",
-    "start": "nodemon dist/index.js"
+    "dev": "nodemon dist/index.js",
+    "satrt":"tsc && node dist/index.js"
   },
   "author": "yadnesh ranshevare",
   "license": "ISC",
